@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/sql/007-joins-and-alias/","created":"2025-03-14T22:35:55.839+05:30","updated":"2025-03-26T16:04:50.826+05:30"}
+{"dg-publish":true,"permalink":"/sql/007-joins-and-alias/","created":"2025-03-14T22:35:55.839+05:30","updated":"2025-03-26T16:14:35.753+05:30"}
 ---
 
 When the two table have a field columns then

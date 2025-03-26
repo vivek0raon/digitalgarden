@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/sql/010-case-statement/","created":"2025-03-19T22:44:55.546+05:30","updated":"2025-03-26T16:05:10.742+05:30"}
+{"dg-publish":true,"permalink":"/sql/010-case-statement/","created":"2025-03-19T22:44:55.546+05:30","updated":"2025-03-26T16:14:29.404+05:30"}
 ---
 
 - Adding cases on a certain field

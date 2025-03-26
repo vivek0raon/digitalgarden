@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/sql/006-aliasing/","created":"2025-03-14T22:28:54.091+05:30","updated":"2025-03-26T16:04:43.543+05:30"}
+{"dg-publish":true,"permalink":"/sql/006-aliasing/","created":"2025-03-14T22:28:54.091+05:30","updated":"2025-03-26T16:14:37.833+05:30"}
 ---
 
 - It is used to change the name of column for most part alias join will be discussed later

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/sql/004-having-clause/","created":"2025-03-14T22:10:05.401+05:30","updated":"2025-03-26T16:05:38.106+05:30"}
+{"dg-publish":true,"permalink":"/sql/004-having-clause/","created":"2025-03-14T22:10:05.401+05:30","updated":"2025-03-26T16:14:42.487+05:30"}
 ---
 
 - It come just after group by 

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/sql/001-where-clause/","created":"2025-03-14T21:21:27.584+05:30","updated":"2025-03-26T16:05:44.388+05:30"}
+{"dg-publish":true,"permalink":"/sql/001-where-clause/","created":"2025-03-14T21:21:27.584+05:30","updated":"2025-03-26T16:14:50.081+05:30"}
 ---
 
 it is used for adding condition to the query

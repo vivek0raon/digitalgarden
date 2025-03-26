@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/sql/009-string-function/","created":"2025-03-19T22:23:26.993+05:30","updated":"2025-03-26T16:05:03.897+05:30"}
+{"dg-publish":true,"permalink":"/sql/009-string-function/","created":"2025-03-19T22:23:26.993+05:30","updated":"2025-03-26T16:14:31.639+05:30"}
 ---
 
 ## Length function

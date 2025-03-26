@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/sql/012-window-function/","created":"2025-03-22T12:18:51.968+05:30","updated":"2025-03-26T16:05:22.689+05:30"}
+{"dg-publish":true,"permalink":"/sql/012-window-function/","created":"2025-03-22T12:18:51.968+05:30","updated":"2025-03-26T16:14:24.680+05:30"}
 ---
 
  ```sql

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/sql/011-subqueries/","created":"2025-03-19T23:03:05.066+05:30","updated":"2025-03-26T16:05:16.664+05:30"}
+{"dg-publish":true,"permalink":"/sql/011-subqueries/","created":"2025-03-19T23:03:05.066+05:30","updated":"2025-03-26T16:14:27.079+05:30"}
 ---
 
 - It can be used instead of join

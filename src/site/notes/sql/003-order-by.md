@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/sql/003-order-by/","created":"2025-03-14T21:59:30.356+05:30","updated":"2025-03-26T16:05:40.178+05:30"}
+{"dg-publish":true,"permalink":"/sql/003-order-by/","created":"2025-03-14T21:59:30.356+05:30","updated":"2025-03-26T16:14:44.544+05:30"}
 ---
 
 This is used to sort the column in ascending or descending order 

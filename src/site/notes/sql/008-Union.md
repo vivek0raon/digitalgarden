@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/sql/008-union/","created":"2025-03-19T20:24:24.192+05:30","updated":"2025-03-26T16:04:57.094+05:30"}
+{"dg-publish":true,"permalink":"/sql/008-union/","created":"2025-03-19T20:24:24.192+05:30","updated":"2025-03-26T16:14:33.840+05:30"}
 ---
 
 Used for

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/sql/005-limit/","created":"2025-03-14T22:22:28.030+05:30","updated":"2025-03-26T16:04:34.531+05:30"}
+{"dg-publish":true,"permalink":"/sql/005-limit/","created":"2025-03-14T22:22:28.030+05:30","updated":"2025-03-26T16:14:40.347+05:30"}
 ---
 
 It is used to limit the number of rows in from the select rows

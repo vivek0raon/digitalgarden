@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/sql/002-group-by/","created":"2025-03-14T21:40:52.468+05:30","updated":"2025-03-26T16:05:42.269+05:30"}
+{"dg-publish":true,"permalink":"/sql/002-group-by/","created":"2025-03-14T21:40:52.468+05:30","updated":"2025-03-26T16:14:47.941+05:30"}
 ---
 
 This is used to roll up all the value into this rows
