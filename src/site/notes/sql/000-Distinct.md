@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/sql/000-distinct/","created":"2025-03-14T21:12:07.796+05:30","updated":"2025-03-26T16:14:52.473+05:30"}
+{"dg-publish":true,"permalink":"/sql/000-distinct/","created":"2025-03-14T21:12:07.796+05:30","updated":"2025-03-26T16:19:17.076+05:30"}
 ---
 
 Do not select duplicate element
