@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/untitled/dccn/","created":"2025-09-17T13:46:07.595+05:30","updated":"2025-09-17T22:10:52.746+05:30"}
+{"dg-publish":true,"permalink":"/untitled/dccn/","created":"2025-09-17T13:46:07.595+05:30","updated":"2025-09-17T22:52:13.486+05:30"}
 ---
 
 ![Pasted image 20250917141205.png](/img/user/Attachments/Pasted%20image%2020250917141205.png)
@@ -544,10 +544,74 @@ This can be expressed mathematically as:
 
 _s(t)_ = { Acos(2π f_c t) for binary 1, 0 for binary 0 }
 
+# 2023
 
 ![Pasted image 20250917214017.png](/img/user/Attachments/Pasted%20image%2020250917214017.png)
+**TCP/IP protocol architecture** is a five-layer model that organizes the complex task of computer communication into a set of manageable, independent layers. Each layer is responsible for a specific function and provides services to the layer above it while using the services of the layer below.
+
+### The TCP/IP Model
+
+| Layer                                   | Function & Description                                                                                                                                                         | Examples                                                             |     |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------- | --- |
+| **1. Physical Layer**                   | Manages the physical interface between a device and the transmission medium. It defines characteristics of the medium, signals, data rate, and connectors.                     | Twisted-pair cable, optical fiber, satellite, terrestrial microwave. |     |
+| **2. Network Access / Data Link Layer** | Responsible for the exchange of data between a computer and the network it is directly attached to. It provides the logical interface with the network hardware.               | Ethernet, Wi-Fi, ATM, frame relay.                                   |     |
+| **3. Internet Layer**                   | Routes data packets across multiple interconnected networks using the **Internet Protocol (IP)**. This layer shields higher layers from the details of the physical network.   | IPv4, IPv6, ICMP.                                                    |     |
+| **4. Transport Layer (Host-to-Host)**   | Provides for the end-to-end transfer of data between applications. It can be reliable (**TCP**) or unreliable (**UDP**) and handles tasks like error control and flow control. | TCP, UDP.                                                            |     |
+| **5. Application Layer**                | Contains the logic needed to support various user applications, like file transfer or email. It provides access to the TCP/IP environment for users.                           | SMTP, FTP, HTTP, SSH.                                                |     |
+|                                         |                                                                                                                                                                                |                                                                      |     |
+|                                         |                                                                                                                                                                                |                                                                      |     |
+|                                         |                                                                                                                                                                                |                                                                      |     |
+
+
+
 
 ![Pasted image 20250917214025.png](/img/user/Attachments/Pasted%20image%2020250917214025.png)
+see above for fist part
+
+Impairments solution:
+Solutions for transmission impairments involve a combination of boosting signal strength, compensating for distortion, and using higher-level protocols to handle errors.
+
+---
+
+### Solution for Attenuation
+
+Attenuation, the weakening of a signal over distance, is managed in two ways:
+
+- **Boosting Signal Strength:** For both analog and digital signals, **amplifiers** or **repeaters** are inserted at regular intervals along a transmission line to boost the signal strength and ensure it is detectable at the receiver. 1
+    
+- **Correcting Attenuation Distortion:** Because attenuation is often greater at higher frequencies, **equalization techniques** are used to balance the loss across the entire spectrum. This can be done with
+    
+    **loading coils** on telephone lines or with specialized amplifiers that boost higher frequencies more than lower ones. 2
+    
+
+---
+
+### Solution for Delay Distortion
+
+Delay distortion, where different frequency components of a signal travel at different speeds, is also corrected using
+
+**equalizing techniques**. 3These equalizers compensate for the varying delays, ensuring that all components of the signal arrive at the receiver at roughly the same time to prevent
+
+**intersymbol interference**. 4
+
+---
+
+### Solutions for Noise
+
+The solution for noise depends on the type:
+
+- **Thermal Noise:** This type of noise is unavoidable and cannot be eliminated. 5 The solution is to design a system with a high enough
+    
+    **Signal-to-Noise Ratio (SNR)** so the signal is strong enough to be intelligible despite the background noise.
+    
+- **Crosstalk and Intermodulation Noise:** These are managed through proper physical design, such as using **shielded cabling** to prevent unwanted coupling between signal paths and ensuring system components are not overloaded. 6
+    
+- **Impulse Noise:** This is the primary cause of errors in digital data. 7 Rather than being filtered out, its effects are handled at higher protocol layers using:
+    
+    - **Error detection and correction codes** to find and, in some cases, fix bit errors caused by noise spikes. 8
+        
+    - **Automatic Repeat Request (ARQ)** protocols that retransmit any data frames corrupted by noise. 9
+
 
 ![Pasted image 20250917214038.png](/img/user/Attachments/Pasted%20image%2020250917214038.png)
 The power of the signal at 10 km is **2.52 mW**.
@@ -600,12 +664,157 @@ The power of the signal at 10 km is **2.52 mW**.
 
 ![Pasted image 20250917214054.png](/img/user/Attachments/Pasted%20image%2020250917214054.png)
 
+Guided transmission media are physical cables that guide electromagnetic waves along a solid path. The three primary types are twisted-pair cable, coaxial cable, and optical fiber.
+
+---
+
+### Twisted-Pair Cable 銅線
+
+Twisted-pair cable is the least expensive and most widely used guided medium1.
+
+- **Description:** It consists of two insulated copper wires twisted together in a spiral pattern2. The twisting helps to reduce electrical interference, known as crosstalk, between adjacent pairs in a cable3. These pairs are often bundled together into a larger cable.
+    
+- **Applications:** It's the most common medium for both analog and digital signals in telephone networks (as subscriber loops) and is widely used for Local Area Networks (LANs), such as Ethernet44.
+    
+
+**Advantages:**
+
+- It is the least expensive guided medium5.
+    
+- It is easier to install and work with than other cable types6.
+    
+
+**Disadvantages:**
+
+- It is limited in distance, bandwidth, and data rate compared to coaxial and optical fiber cable7.
+    
+- It is susceptible to signal reflections and interference from crosstalk8.
+    
+
+---
+
+### Coaxial Cable 同軸ケーブル
+
+Coaxial cable can operate over a wider range of frequencies and support more stations on a shared line than twisted-pair cable9.
+
+- **Description:** It consists of a single inner wire conductor surrounded by a hollow outer cylindrical conductor10. An insulating material separates the two conductors, and the entire cable is covered by a protective jacket11.
+    
+- **Applications:** Coaxial cable is widely used for television distribution (cable TV), long-distance telephone transmission, and short-run computer system links12.
+    
+
+**Advantages:**
+
+- It has superior frequency characteristics compared to twisted-pair and can be used at higher frequencies and data rates13.
+    
+- Its shielded, concentric construction makes it much less susceptible to interference and crosstalk than twisted-pair14.
+    
+
+**Disadvantages:**
+
+- It suffers from attenuation, thermal noise, and intermodulation noise, which constrain its performance15.
+    
+- For long-distance transmission, amplifiers are required every few kilometers16.
+    
+
+---
+
+### Optical Fiber Cable 光ファイバーケーブル
+
+Optical fiber is a thin, flexible medium made of glass or plastic that is capable of guiding an optical ray17.
+
+- **Description:** An optical fiber strand consists of three concentric sections: an inner **core**, an outer **cladding** that reflects light back into the core, and a protective **buffer coating**18. These strands are bundled into a cable protected by an outer jacket19.
+    
+- **Applications:** Optical fiber is used extensively in long-haul telecommunications trunks, metropolitan and rural trunks, and is increasingly used for subscriber loops and LANs20.
+    
+
+**Advantages:**
+
+- **Greater Capacity:** It offers immense potential bandwidth, with demonstrated data rates of hundreds of gigabits per second (Gbps) over long distances21.
+    
+- **Smaller Size and Lighter Weight:** It is considerably thinner and lighter than coaxial or twisted-pair cable for a comparable information-carrying capacity22.
+    
+- **Lower Attenuation:** Signal weakening is significantly lower for optical fiber and is constant over a wide range of frequencies23.
+    
+- **Electromagnetic Isolation:** It is not affected by external electromagnetic fields, making it immune to interference, impulse noise, and crosstalk. It is also highly secure from eavesdropping24.
+    
+- **Greater Repeater Spacing:** Repeaters, which regenerate the signal, can be spaced tens or even hundreds of kilometers apart, reducing cost and sources of error25.
+    
+
+**Disadvantages:**
+
+- The manufacturing of ultrapure fiber is difficult, and higher-loss multicomponent glass fibers are used as a more economical alternative26.
+    
+- Plastic fiber, while less costly, has higher losses and is only suitable for shorter-haul links27.
+
+
 ![Pasted image 20250917214113.png](/img/user/Attachments/Pasted%20image%2020250917214113.png)
+see copy
 
 ![Pasted image 20250917214130.png](/img/user/Attachments/Pasted%20image%2020250917214130.png)
-
+![Pasted image 20250917222923.png](/img/user/Attachments/Pasted%20image%2020250917222923.png)
 ![Pasted image 20250917214145.png](/img/user/Attachments/Pasted%20image%2020250917214145.png)
+
+Here are the transmission characteristics for terrestrial and satellite microwave communications.
+
+---
+
+## Terrestrial Microwave 🗼
+
+Terrestrial microwave systems use highly directional, point-to-point antennas. Their transmission characteristics are defined by their frequency range, attenuation, and susceptibility to interference.
+
+- **Frequency Range:** Common frequencies used are in the range of 1 to 40 GHz1. The higher the frequency, the higher the potential bandwidth and data rate2.
+    
+- **Attenuation:** The primary source of signal loss is attenuation, which increases with distance3. Unlike wired media, this loss varies as the square of the distance, which allows for much longer repeater spacing of 10 to 100 km4. Signal attenuation is increased by rainfall, with the effect becoming especially noticeable above 10 GHz5.
+    
+- **Interference:** As microwave transmission areas can overlap, interference is a potential issue6. Because of this, the assignment of frequency bands is strictly regulated7.
+    
+
+---
+
+## Satellite Microwave 🛰️
+
+A communication satellite acts as a microwave relay station, linking two or more ground-based stations.
+
+- **Optimal Frequency Range:** The optimal frequency range for satellite transmission is between 1 and 10 GHz8. Below 1 GHz, signals are subject to significant natural and human-made noise, while above 10 GHz, signals are severely attenuated by atmospheric absorption and precipitation9.
+    
+- **Uplink/Downlink Frequencies:** To avoid interference, a satellite must transmit and receive on different frequencies10. Signals are sent from an earth station on an
+    
+    **uplink** frequency and retransmitted by the satellite on a **downlink** frequency11. Common frequency bands include the 4/6-GHz, 12/14-GHz, and 20/30-GHz bands12.
+    
+- **Propagation Delay:** Due to the long distances involved, there is a significant signal propagation delay of about a quarter of a second from an earth station to the satellite and back13.
+    
+- **Broadcast Nature:** Satellite transmission is an inherently broadcast facility14. A signal transmitted from a satellite can be received by many stations over a wide geographic area15.
+
 
 ![Pasted image 20250917214157.png](/img/user/Attachments/Pasted%20image%2020250917214157.png)
 
+**Delta Modulation (DM)** is a technique for converting an analog signal into a digital bit stream. Its working principle is to approximate the analog input with a **staircase function** that moves up or down by a fixed step size at each sampling interval.
 
+---
+
+### How Delta Modulation Works
+
+The process generates a single binary digit for each sample based on a simple comparison:
+
+1. **Comparison:** At each sampling time, the analog input signal is compared to the most recent value of the approximating staircase function. 1
+    
+2. **Binary Output:**
+    
+    - If the input signal is
+        
+        **greater** than the staircase value, a **1** is generated, and the staircase moves **up** by one step (δ). 2
+        
+    - If the input signal is
+        
+        **less** than the staircase value, a **0** is generated, and the staircase moves **down** by one step (δ). 3
+        
+
+The output of this process is a binary sequence that represents the change, or derivative, of the analog signal rather than its direct amplitude. 4At the receiving end, this bit stream is used to reconstruct the staircase function, which is then smoothed to produce an approximation of the original analog signal. 5
+
+### Errors in Delta Modulation
+
+The accuracy of Delta Modulation depends on the chosen step size (δ), which creates a trade-off between two types of errors6:
+
+- **Slope Overload Noise:** If the analog signal changes more rapidly than the staircase can follow, the staircase falls behind. 7 This occurs when the step size is too small.
+    
+- **Quantizing Noise:** If the analog signal changes very slowly, the staircase function overshoots the signal, alternating between steps above and below it. 8 This occurs when the step size is too large.
