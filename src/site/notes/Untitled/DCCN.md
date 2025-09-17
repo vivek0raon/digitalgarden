@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/untitled/dccn/","created":"2025-09-17T13:46:07.595+05:30","updated":"2025-09-17T22:52:13.486+05:30"}
+{"dg-publish":true,"permalink":"/untitled/dccn/","created":"2025-09-17T13:46:07.595+05:30","updated":"2025-09-17T23:00:19.462+05:30"}
 ---
 
 ![Pasted image 20250917141205.png](/img/user/Attachments/Pasted%20image%2020250917141205.png)
@@ -303,13 +303,16 @@ Here is the corrected comparison table:
 
 ### Corrected Comparison: Single-Mode vs. Multi-Mode Fiber
 
-| Feature               | Multi-Mode Fiber                                                                                                                                           | Single-Mode Fiber                                                                                                                   |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| **Light Path**        | Light rays travel along **multiple paths** at various angles within a larger core.                                                                         | Light travels along a **single path**, the axial ray, through a very narrow core.                                                   |
-| **Core Radius**       | Has a larger core radius (typically 50 or 62.5 µm).                                                                                                        | Has a much smaller core radius, reduced to the order of a light's wavelength (typically around 10 µm).                              |
-| **Signal Distortion** | Experiences distortion because the multiple paths have different lengths, causing light pulses to spread out over time. This limits the maximum data rate. | The distortion found in multi-mode fiber cannot occur because there is only one transmission path, leading to superior performance. |
-| **Typical Use**       | Best suited for **short-distance** applications, such as in Local Area Networks (LANs).                                                                    | Typically used for **long-distance** applications, including telephone networks and cable television.                               |
+| Feature               | Multi-Mode Fiber                                                                                                                                           | Single-Mode Fiber                                                                                                                   |     |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | --- |
+| **Light Path**        | Light rays travel along **multiple paths** at various angles within a larger core.                                                                         | Light travels along a **single path**, the axial ray, through a very narrow core.                                                   |     |
+| **Core Radius**       | Has a larger core radius (typically 50 or 62.5 µm).                                                                                                        | Has a much smaller core radius, reduced to the order of a light's wavelength (typically around 10 µm).                              |     |
+| **Signal Distortion** | Experiences distortion because the multiple paths have different lengths, causing light pulses to spread out over time. This limits the maximum data rate. | The distortion found in multi-mode fiber cannot occur because there is only one transmission path, leading to superior performance. |     |
+| **Typical Use**       | Best suited for **short-distance** applications, such as in Local Area Networks (LANs).                                                                    | Typically used for **long-distance** applications, including telephone networks and cable television.                               |     |
+
+
 ![Pasted image 20250917172053.png](/img/user/Attachments/Pasted%20image%2020250917172053.png)
+
 The required bit rate is **27,200 bps**.
 
 This is calculated by determining the minimum sampling rate based on the highest frequency in the analog signal and then multiplying it by the number of bits used for each digital sample.
