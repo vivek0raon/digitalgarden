@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/untitled/dccn/","created":"2025-09-17T13:46:07.595+05:30","updated":"2025-09-17T17:59:18.484+05:30"}
+{"dg-publish":true,"permalink":"/untitled/dccn/","created":"2025-09-17T13:46:07.595+05:30","updated":"2025-09-17T18:45:38.794+05:30"}
 ---
 
 ![Pasted image 20250917141205.png](/img/user/Attachments/Pasted%20image%2020250917141205.png)
@@ -281,14 +281,114 @@ see above
 see above
 
 ![Pasted image 20250917172032.png](/img/user/Attachments/Pasted%20image%2020250917172032.png)
+You are absolutely right. My apologies for that error in the previous table. Thank you for the correction.
 
+Single-mode fiber allows only a **single path** for light, which is its key advantage over multi-mode fiber.
 
+Here is the corrected comparison table:
+
+---
+
+### Corrected Comparison: Single-Mode vs. Multi-Mode Fiber
+
+| Feature               | Multi-Mode Fiber                                                                                                                                           | Single-Mode Fiber                                                                                                                   |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| **Light Path**        | Light rays travel along **multiple paths** at various angles within a larger core.                                                                         | Light travels along a **single path**, the axial ray, through a very narrow core.                                                   |
+| **Core Radius**       | Has a larger core radius (typically 50 or 62.5 µm).                                                                                                        | Has a much smaller core radius, reduced to the order of a light's wavelength (typically around 10 µm).                              |
+| **Signal Distortion** | Experiences distortion because the multiple paths have different lengths, causing light pulses to spread out over time. This limits the maximum data rate. | The distortion found in multi-mode fiber cannot occur because there is only one transmission path, leading to superior performance. |
+| **Typical Use**       | Best suited for **short-distance** applications, such as in Local Area Networks (LANs).                                                                    | Typically used for **long-distance** applications, including telephone networks and cable television.                               |
 ![Pasted image 20250917172053.png](/img/user/Attachments/Pasted%20image%2020250917172053.png)
+The required bit rate is **27,200 bps**.
+
+This is calculated by determining the minimum sampling rate based on the highest frequency in the analog signal and then multiplying it by the number of bits used for each digital sample.
+
+---
+
+### Explanation
+
+The conversion of an analog signal to a digital signal involves two main steps: sampling and quantization.
+
+**1. Determine the Sampling Rate (Nyquist Theorem)**
+
+According to the
+
+**Sampling Theorem**, to accurately represent an analog signal, it must be sampled at a rate that is at least twice its highest frequency component1.
+
+- Highest frequency in the signal = **3400 Hz**
+    
+- Minimum Sampling Rate = 2 × 3400 Hz = **6800 samples per second**
+    
+
+**2. Identify the Bits per Sample**
+
+The problem states that a **4-bit converter** is used, which means each of the 6800 samples taken per second will be represented by 4 bits.
+
+**3. Calculate the Total Bit Rate**
+
+The final bit rate is the product of the sampling rate and the number of bits per sample.
+
+- **Bit Rate** = Sampling Rate × Bits per Sample
+    
+- **Bit Rate** = 6800 samples/sec × 4 bits/sample = **27,200 bps**
+
 
 ![Pasted image 20250917172104.png](/img/user/Attachments/Pasted%20image%2020250917172104.png)
-
-![Pasted image 20250917172115.png](/img/user/Attachments/Pasted%20image%2020250917172115.png)
+**Sampling Theorem** states that if an analog signal is sampled at regular intervals at a rate higher than twice the highest frequency component of the signal, then the samples contain all the information of the original signal.
 
 ![Pasted image 20250917172126.png](/img/user/Attachments/Pasted%20image%2020250917172126.png)
+**Delta modulation (DM)** is a technique used to transform analog data into digital signals. It is one of the primary methods employed in **codecs** (coder-decoders). DM offers an alternative to Pulse Code Modulation (PCM) and aims to improve performance or reduce complexity.
 
+Here's a breakdown of the delta modulation technique:
+
+• **Approximation Method**
+
+    ◦ An analog input signal is approximated by a **staircase function**.
+
+    ◦ This staircase function is characterized by its binary behavior: at each sampling interval (Ts), it moves either up or down by a constant amount, known as one **quantization level (δ)**.
+
+    ◦ Essentially, DM produces a bit stream by approximating the _derivative_ of the analog signal, rather than its amplitude directly.
+
+• **Generation of Binary Output**
+
+    ◦ At each sampling time, the analog input is compared to the most recent value of the approximating staircase function.
+
+    ◦ If the value of the sampled analog waveform exceeds that of the staircase function, a **binary '1'** is generated.
+
+    ◦ If the value of the sampled analog waveform does not exceed the staircase function, a **binary '0'** is generated.
+
+    ◦ This ensures that the staircase function constantly changes in the direction of the input signal. Therefore, a '1' is generated if the staircase is to go up, and a '0' if it is to go down.
+
+• **Reconstruction**
+
+    ◦ The binary sequence produced by the DM process is sent to the receiver.
+
+    ◦ At the receiver, this binary sequence is used to reconstruct the staircase function.
+
+    ◦ The reconstructed staircase function can then be smoothed, typically by an integration process or a lowpass filter, to produce an analog approximation of the original analog input signal
+    
 ![Pasted image 20250917175259.png](/img/user/Attachments/Pasted%20image%2020250917175259.png)
+The main difference is that
+
+**half-duplex** communication allows data to flow in both directions but only one way at a time, while **full-duplex** communication allows data to flow in both directions simultaneously1.
+
+A good analogy is a conversation:
+
+- **Half Duplex 🚶‍♂️↔️🚶‍♀️:** Like using a walkie-talkie. You have to say "over" to signal that you're done talking and are now listening. Both parties can speak, but not at the same time.
+    
+- **Full Duplex 🗣️📞🗣️:** Like a telephone call. Both people can talk and listen simultaneously without waiting for the other to finish.
+    
+
+---
+
+### Comparison of Half Duplex and Full Duplex
+
+|Feature|Half Duplex|Full Duplex|
+|---|---|---|
+|**Direction of Flow**|Two-way, but only one direction at a time2.|Two-way, simultaneously3.|
+|**Simultaneous Action**|A station can either transmit OR receive at any given moment.|A station can transmit AND receive at the same time4.|
+|**Analogy**|Walkie-Talkie|Telephone Call|
+|**Performance**|Less efficient because the channel is only used for one direction at a time.|More efficient as it can potentially double the capacity of the link compared to half duplex.|
+
+For context, there is also
+
+**simplex** transmission, where signals are transmitted in only one direction, like a one-way street or a standard radio broadcast5.
