@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/untitled/dccn/","created":"2025-09-17T13:46:07.595+05:30","updated":"2025-09-17T21:38:42.018+05:30"}
+{"dg-publish":true,"permalink":"/untitled/dccn/","created":"2025-09-17T13:46:07.595+05:30","updated":"2025-09-17T22:10:52.746+05:30"}
 ---
 
 ![Pasted image 20250917141205.png](/img/user/Attachments/Pasted%20image%2020250917141205.png)
@@ -39,21 +39,31 @@ see copy
 
 Here is a breakdown of each layer's function, from lowest to highest:
 
-| Layer                                   | Function & Description                                                                                                                                                                                                                                                                                    | Examples                                                                                                                                                                                                               |                                   |           |
-| --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- | --------- |
-| **1. Physical Layer**                   | This layer manages the physical interface between a device (like a computer) and the transmission medium (like a cable or wireless signal). It is concerned with the characteristics of the medium, the nature of the signals, the data rate, and the physical connectors.                                | Twisted-pair cable, optical fiber, satellite, terrestrial microwave.                                                                                                                                                   |                                   |           |
-| **2. Network Access / Data Link Layer** | This layer is responsible for the exchange of data between a computer and the network it is attached to. It provides the logical interface with the network hardware. When two devices are on different networks, this layer handles access to and routing across the initial network to a router.        | Ethernet, Wi-Fi, ATM, frame relay.                                                                                                                                                                                     |                                   |           |
-| **3. Internet Layer**                   | The primary function of this layer is to route data across multiple interconnected networks (an internetwork). It uses the                                                                                                                                                                                | **Internet Protocol (IP)**, which is implemented in both the end systems and the routers connecting the networks. This layer effectively shields higher layers from the details of the physical network configuration. | IPv4, IPv6, ICMP.                 |           |
-| **4. Transport Layer (Host-to-Host)**   | This layer provides for the transfer of data between end systems. It can offer a reliable, connection-oriented service using the                                                                                                                                                                          | **Transmission Control Protocol (TCP)**, which includes mechanisms for error control and flow control. Alternatively, it can provide a simpler, connectionless "best-effort" delivery service using the                | **User Datagram Protocol (UDP)**. | TCP, UDP. |
-| **5. Application Layer**                | This layer contains the logic needed to support various user applications, such as file transfer or email. For each different application, a separate module is needed that is specific to that application. It provides access to the TCP/IP environment for users and distributed information services. | SMTP, FTP, HTTP, SSH.                                                                                                                                                                                                  |                                   |           |
+---
 
-|                         |                                                                                                                            |                                                                                                                                                                 |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Number of Layers**    | 5 layers (Physical, Network Access, Internet, Transport, Application) as described in this book's primary model.           | 7 layers (Physical, Data Link, Network, Transport, Session, Presentation, Application).                                                                         |
-| **Development**         | The protocols came first, and the model was developed to describe the existing protocols.                                  | The model was developed first as a theoretical framework, and then protocols were developed to fit the model.                                                   |
-| **Layer Functionality** | The Application layer combines the functions of the OSI model's top three layers (Application, Presentation, and Session). | Functionality is more distinctly separated into layers. The Session layer manages dialogues, and the Presentation layer handles data formatting and encryption. |
-| **Usage**               | It is the protocol suite used for the Internet and is the dominant architecture in practice.                               | It serves primarily as a standardized reference model to describe communications functions but is rarely implemented in practice.                               |
-| **Protocol Dependency** | The model is practically inseparable from its protocols (TCP, IP, etc.).                                                   | The model is theoretically independent of its protocols, which can be replaced.                                                                                 |
+### The TCP/IP Model
+
+|Layer|Function & Description|Examples|
+|---|---|---|
+|**1. Physical Layer**|Manages the physical interface between a device and the transmission medium. It defines characteristics of the medium, signals, data rate, and connectors.|Twisted-pair cable, optical fiber, satellite, terrestrial microwave.|
+|**2. Network Access / Data Link Layer**|Responsible for the exchange of data between a computer and the network it is attached to. It provides the logical interface with the network hardware.|Ethernet, Wi-Fi, ATM, frame relay.|
+|**3. Internet Layer**|Routes data across multiple interconnected networks using the **Internet Protocol (IP)**. This layer shields higher layers from the details of the physical network.|IPv4, IPv6, ICMP.|
+|**4. Transport Layer (Host-to-Host)**|Provides for the transfer of data between end systems, offering either a reliable, connection-oriented service (**TCP**) or a simpler, connectionless service (**UDP**).|TCP, UDP.|
+|**5. Application Layer**|Contains the logic needed to support various user applications, like file transfer or email. It provides access to the TCP/IP environment for users.|SMTP, FTP, HTTP, SSH.|
+
+---
+
+### Comparison: TCP/IP vs. OSI Model
+
+| Feature                 | TCP/IP Model                                                                                                               | OSI Model                                                                                                                                      |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Number of Layers**    | 5 layers (Physical, Network Access, Internet, Transport, Application).                                                     | 7 layers (Physical, Data Link, Network, Transport, Session, Presentation, Application).                                                        |
+| **Development**         | The protocols came first, and the model was developed to describe them.                                                    | The model was developed first as a theoretical framework.                                                                                      |
+| **Layer Functionality** | The Application layer combines the functions of the OSI model's top three layers (Application, Presentation, and Session). | Functionality is distinctly separated. The Session layer manages dialogues, and the Presentation layer handles data formatting and encryption. |
+| **Usage**               | It is the protocol suite used for the Internet and is the dominant architecture in practice.                               | It serves primarily as a standardized reference model to describe communications functions but is rarely implemented.                          |
+| **Protocol Dependency** | The model is practically inseparable from its protocols (TCP, IP, etc.).                                                   | The model is theoretically independent of its protocols.                                                                                       |
+
+
 
 ![Pasted image 20250917154515.png](/img/user/Attachments/Pasted%20image%2020250917154515.png)
 
@@ -231,17 +241,19 @@ Here is a detailed comparison of their transmission characteristics:
 ---
 
 ### Wired Media vs. Wireless Media
+You are absolutely correct, my apologies. The table formatting was incorrect and caused the text to be cut off.
 
-| Feature                 | Wired Media (Guided) 🔌                                                                                                                                                | Wireless Media (Unguided) 📡                                                                                                                |                                                             |                                                                                              |
-| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| **Basic Principle**     | Electromagnetic waves are guided along a solid, physical path like copper wire or optical fiber2.                                                                      | Signals are transmitted by an antenna through the atmosphere, outer space, or water3.                                                       |                                                             |                                                                                              |
-| **Key Limiting Factor** | The transmission characteristics are determined more by the                                                                                                            | **medium itself**4.                                                                                                                         | The transmission characteristics are determined more by the | **bandwidth of the signal** produced by the antenna5.                                        |
-| **Interference**        | Less susceptible to outside interference6. Proper shielding can minimize interference from nearby cables (crosstalk) and other sources7.                               | Highly susceptible to interference from competing signals in overlapping frequency bands, which can distort or cancel the signal8.          |                                                             |                                                                                              |
-| **Security**            | Generally more secure. For example, optical fiber is inherently difficult to tap and does not radiate energy, providing a high degree of security from eavesdropping9. | Generally less secure. Wireless LANs can be especially vulnerable to network eavesdropping because signals are broadcast through the air10. |                                                             |                                                                                              |
-| **Installation**        | Installation can be costly and time-consuming, as it requires physically laying cables11.                                                                              | Installation is typically faster and less expensive, as it avoids the cost of installing kilometers of cable12.                             |                                                             |                                                                                              |
-| **Mobility**            | Offers limited mobility, as devices must be physically connected to the network.                                                                                       | Provides high mobility, allowing users to remain connected while moving.                                                                    |                                                             |                                                                                              |
-| **Examples**            |                                                                                                                                                                        | **Twisted-pair cable**, **coaxial cable**, and **optical fiber**13.                                                                         |                                                             | **Terrestrial microwave**, **satellite microwave**, **broadcast radio**, and **infrared**14. |
+Here is the properly formatted table.
 
+| Feature                 | Wired Media (Guided) 🔌                                                                                                                                               | Wireless Media (Unguided) 📡                                                                                                              |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| **Basic Principle**     | Electromagnetic waves are guided along a solid, physical path like copper wire or optical fiber.                                                                      | Signals are transmitted by an antenna through the atmosphere, outer space, or water.                                                      |
+| **Key Limiting Factor** | The transmission characteristics are determined more by the **medium itself**.                                                                                        | The transmission characteristics are determined more by the **bandwidth of the signal** produced by the antenna.                          |
+| **Interference**        | Less susceptible to outside interference. Proper shielding can minimize interference from nearby cables (crosstalk) and other sources.                                | Highly susceptible to interference from competing signals in overlapping frequency bands, which can distort or cancel the signal.         |
+| **Security**            | Generally more secure. For example, optical fiber is inherently difficult to tap and does not radiate energy, providing a high degree of security from eavesdropping. | Generally less secure. Wireless LANs can be especially vulnerable to network eavesdropping because signals are broadcast through the air. |
+| **Installation**        | Installation can be costly and time-consuming, as it requires physically laying cables.                                                                               | Installation is typically faster and less expensive, as it avoids the cost of installing kilometers of cable.                             |
+| **Mobility**            | Offers limited mobility, as devices must be physically connected to the network.                                                                                      | Provides high mobility, allowing users to remain connected while moving.                                                                  |
+| **Examples**            | **Twisted-pair cable**, **coaxial cable**, and **optical fiber**.                                                                                                     | **Terrestrial microwave**, **satellite microwave**, **broadcast radio**, and **infrared**.                                                |
 
 ![Pasted image 20250917163050.png](/img/user/Attachments/Pasted%20image%2020250917163050.png)
 ![Pasted image 20250917171855.png](/img/user/Attachments/Pasted%20image%2020250917171855.png)
@@ -260,20 +272,20 @@ A data communications network performs numerous essential functions to facilitat
 
 ## Key Functions of a Data Communications Network
 
-| Function                            | Explanation                                                                                                                                                                                                                                         |                                                                                               |
-| ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| **Transmission System Utilization** | This involves making efficient use of network resources2. Techniques like                                                                                                                                                                           | **multiplexing** are used to allow multiple devices to share a single transmission facility3. |
-| **Interfacing**                     | A device must have an interface to connect with the transmission system4.                                                                                                                                                                           |                                                                                               |
-| **Signal Generation**               | The network is responsible for generating the electromagnetic signals that are capable of being propagated through the transmission medium and interpreted as data by the receiver5.                                                                |                                                                                               |
-| **Synchronization**                 | The transmitter and receiver must be synchronized6. The receiver must be able to determine when a signal begins and ends, as well as the duration of each signal element7.                                                                          |                                                                                               |
-| **Exchange Management**             | This involves the cooperation and establishment of conventions between the two communicating parties8. It includes deciding whether both devices can transmit simultaneously or must take turns, the format of the data, and how to handle errors9. |                                                                                               |
-| **Error Detection and Correction**  | The system must detect and correct errors that occur during transmission, as transmitted signals are subject to distortion10.                                                                                                                       |                                                                                               |
-| **Flow Control**                    | This function is required to ensure that the source does not send data faster than the destination can process and absorb it11.                                                                                                                     |                                                                                               |
-| **Addressing and Routing**          | When more than two devices share a transmission facility, the source must identify the intended destination12. The system must then choose a specific route through the network to deliver the data13.                                              |                                                                                               |
-| **Recovery**                        | This is a mechanism to resume an information exchange that was interrupted by a fault in the system, or at least to restore the systems to their state before the exchange began14.                                                                 |                                                                                               |
-| **Message Formatting**              | This refers to the agreement between the two communicating parties on the form of the data being exchanged, such as the binary code used for characters15.                                                                                          |                                                                                               |
-| **Security**                        | The network must provide security measures to ensure that only the intended receiver gets the data and that the data is not altered in transit16.                                                                                                   |                                                                                               |
-| **Network Management**              | This includes the capabilities needed to configure the system, monitor its status, react to failures and overloads, and plan for future growth17.                                                                                                   |                                                                                               |
+| Function                            | Explanation                                                                                                                                                                                                                                         |     |
+| ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
+| **Transmission System Utilization** | This involves making efficient use of network resources. Techniques like **multiplexing** are used to allow multiple devices to share a single transmission facility.                                                                               |     |
+| **Interfacing**                     | A device must have an interface to connect with the transmission system4.                                                                                                                                                                           |     |
+| **Signal Generation**               | The network is responsible for generating the electromagnetic signals that are capable of being propagated through the transmission medium and interpreted as data by the receiver5.                                                                |     |
+| **Synchronization**                 | The transmitter and receiver must be synchronized6. The receiver must be able to determine when a signal begins and ends, as well as the duration of each signal element7.                                                                          |     |
+| **Exchange Management**             | This involves the cooperation and establishment of conventions between the two communicating parties8. It includes deciding whether both devices can transmit simultaneously or must take turns, the format of the data, and how to handle errors9. |     |
+| **Error Detection and Correction**  | The system must detect and correct errors that occur during transmission, as transmitted signals are subject to distortion10.                                                                                                                       |     |
+| **Flow Control**                    | This function is required to ensure that the source does not send data faster than the destination can process and absorb it11.                                                                                                                     |     |
+| **Addressing and Routing**          | When more than two devices share a transmission facility, the source must identify the intended destination12. The system must then choose a specific route through the network to deliver the data13.                                              |     |
+| **Recovery**                        | This is a mechanism to resume an information exchange that was interrupted by a fault in the system, or at least to restore the systems to their state before the exchange began14.                                                                 |     |
+| **Message Formatting**              | This refers to the agreement between the two communicating parties on the form of the data being exchanged, such as the binary code used for characters15.                                                                                          |     |
+| **Security**                        | The network must provide security measures to ensure that only the intended receiver gets the data and that the data is not altered in transit16.                                                                                                   |     |
+| **Network Management**              | This includes the capabilities needed to configure the system, monitor its status, react to failures and overloads, and plan for future growth17.                                                                                                   |     |
 
 ![Pasted image 20250917172000.png](/img/user/Attachments/Pasted%20image%2020250917172000.png)
 see above
@@ -455,11 +467,11 @@ The main difference between analog and digital transmission is how they handle s
 
 ### Comparison of Transmission Methods
 
-| Feature                           | Analog Transmission                                                                                                                       | Digital Transmission                                                                                                                               |      |                                                                                                                             |
-| --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ---- | --------------------------------------------------------------------------------------------------------------------------- |
-| **Signal Handling**               | Transmits analog signals without regard to their content, whether they represent analog data (like voice) or digital data (from a modem). | Assumes a binary content in the signal, which can represent digital data or a digitized version of analog data.                                    |      |                                                                                                                             |
-| **Method for Extending Distance** | Uses                                                                                                                                      | **amplifiers** to boost the energy of the entire signal, including any noise that has been introduced.                                             | Uses | **repeaters**, which receive the digital signal, recover the pattern of 1s and 0s, and then retransmit a new, clean signal. |
-| **Effect of Noise**               | Noise and signal impairments are **cumulative**. As the signal travels through cascaded amplifiers, it becomes more and more distorted.   | The effects of noise are **not cumulative**. Because the signal is regenerated at each repeater, data integrity is maintained over long distances. |      |                                                                                                                             |
+| Feature                           | Analog Transmission                                                                                                                       | Digital Transmission                                                                                                                               |
+| --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Signal Handling**               | Transmits analog signals without regard to their content, whether they represent analog data (like voice) or digital data (from a modem). | Assumes a binary content in the signal, which can represent digital data or a digitized version of analog data.                                    |
+| **Method for Extending Distance** | Uses **amplifiers** to boost the energy of the entire signal, including any noise that has been introduced.                               | Uses **repeaters**, which receive the digital signal, recover the pattern of 1s and 0s, and then retransmit a new, clean signal.                   |
+| **Effect of Noise**               | Noise and signal impairments are **cumulative**. As the signal travels through cascaded amplifiers, it becomes more and more distorted.   | The effects of noise are **not cumulative**. Because the signal is regenerated at each repeater, data integrity is maintained over long distances. |
 
 ![Pasted image 20250917184921.png](/img/user/Attachments/Pasted%20image%2020250917184921.png)
 
@@ -533,6 +545,67 @@ This can be expressed mathematically as:
 _s(t)_ = { Acos(2π f_c t) for binary 1, 0 for binary 0 }
 
 
+![Pasted image 20250917214017.png](/img/user/Attachments/Pasted%20image%2020250917214017.png)
 
+![Pasted image 20250917214025.png](/img/user/Attachments/Pasted%20image%2020250917214025.png)
+
+![Pasted image 20250917214038.png](/img/user/Attachments/Pasted%20image%2020250917214038.png)
+The power of the signal at 10 km is **2.52 mW**.
+
+---
+
+## Step-by-Step Calculation
+
+1. Calculate the Total Loss in dB:
+    
+    The total loss is the loss per kilometer multiplied by the total distance.
+    
+    - **Loss per km:** -0.2 dB/km
+        
+    - **Distance:** 10 km
+        
+    - **Total Loss (L_dB):** -0.2 dB/km × 10 km = **-2 dB**
+        
+2. Use the Decibel Formula to Find the Final Power:
+    
+    The formula for loss in decibels (dB) is:
+    
+    - _L_dB = 10 log₁₀(P_out / P_in)_
+        
+    
+    Where:
+    
+    - **L_dB** = Total loss in decibels (-2 dB)
+        
+    - **P_in** = Input power (4 mW)
+        
+    - **P_out** = Output power (the value we need to find)
+        
+    
+    Plugging in the values:
+    
+    -2 = 10 log₁₀(P_out / 4)
+    
+    -0.2 = log₁₀(P_out / 4)
+    
+    To solve for P_out, we take the antilog (10 to the power of) of both sides:
+    
+    10⁻⁰·² = P_out / 4
+    
+    0.6309 = P_out / 4
+    
+    P_out = 0.6309 × 4
+    
+    P_out ≈ 2.52 mW
+
+![Pasted image 20250917214054.png](/img/user/Attachments/Pasted%20image%2020250917214054.png)
+
+![Pasted image 20250917214113.png](/img/user/Attachments/Pasted%20image%2020250917214113.png)
+
+![Pasted image 20250917214130.png](/img/user/Attachments/Pasted%20image%2020250917214130.png)
+
+![Pasted image 20250917214145.png](/img/user/Attachments/Pasted%20image%2020250917214145.png)
+
+![Pasted image 20250917214157.png](/img/user/Attachments/Pasted%20image%2020250917214157.png)
 
 
