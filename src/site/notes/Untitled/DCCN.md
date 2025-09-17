@@ -1,7 +1,8 @@
 ---
-{"dg-publish":true,"permalink":"/untitled/dccn/","created":"2025-09-17T13:46:07.595+05:30","updated":"2025-09-17T23:00:19.462+05:30"}
+{"dg-publish":true,"permalink":"/untitled/dccn/","created":"2025-09-17T13:46:07.595+05:30","updated":"2025-09-17T23:05:21.933+05:30"}
 ---
 
+# CS/IT 2022 MID
 ![Pasted image 20250917141205.png](/img/user/Attachments/Pasted%20image%2020250917141205.png)
 Its primary significance lies in being a normalized measure of the signal-to-noise ratio (SNR) that directly determines the achievable **Bit Error Rate (BER)** for a given modulation scheme.
 It tells you how much stronger the signal energy for each bit of data is compared to the noise it has to contend with. A higher E_b/N_0 value means a cleaner signal, which leads to fewer errors when the receiver interprets the data.
@@ -160,6 +161,8 @@ Shannon's formula is significant because it provides a fundamental upper limit o
 In essence, Shannon's formula is a cornerstone of information theory that defines the boundaries of what is possible in data communications.
 
 
+# MTECH IT CS 2022
+
 ![Pasted image 20250917163017.png](/img/user/Attachments/Pasted%20image%2020250917163017.png)
 see above
 
@@ -257,6 +260,8 @@ Here is the properly formatted table.
 
 ![Pasted image 20250917163050.png](/img/user/Attachments/Pasted%20image%2020250917163050.png)
 ![Pasted image 20250917171855.png](/img/user/Attachments/Pasted%20image%2020250917171855.png)
+
+# 2018 IT ENDSEM
 
 ![Pasted image 20250917171929.png](/img/user/Attachments/Pasted%20image%2020250917171929.png)
 Layered protocols are used because they break the complex task of communication into smaller, more manageable subtasks, arranging them in a vertical stack1. This modular design provides two key benefits:
@@ -408,6 +413,8 @@ For context, there is also
 
 **simplex** transmission, where signals are transmitted in only one direction, like a one-way street or a standard radio broadcast5.
 
+# IT MIDSEM 2018
+
 ![Pasted image 20250917184822.png](/img/user/Attachments/Pasted%20image%2020250917184822.png)
 
 A **protocol** is a set of rules or conventions that govern how corresponding, or peer, layers in two systems communicate
@@ -547,7 +554,7 @@ This can be expressed mathematically as:
 
 _s(t)_ = { Acos(2π f_c t) for binary 1, 0 for binary 0 }
 
-# 2023
+# 2023 CS MIDSEM
 
 ![Pasted image 20250917214017.png](/img/user/Attachments/Pasted%20image%2020250917214017.png)
 **TCP/IP protocol architecture** is a five-layer model that organizes the complex task of computer communication into a set of manageable, independent layers. Each layer is responsible for a specific function and provides services to the layer above it while using the services of the layer below.
