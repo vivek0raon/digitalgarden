@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/untitled/dccn/","created":"2025-09-17T13:46:07.595+05:30","updated":"2025-09-17T23:05:21.933+05:30"}
+{"dg-publish":true,"permalink":"/untitled/dccn/","created":"2025-09-17T13:46:07.595+05:30","updated":"2025-09-18T08:23:06.758+05:30"}
 ---
 
 # CS/IT 2022 MID
@@ -828,3 +828,356 @@ The accuracy of Delta Modulation depends on the chosen step size (δ), which cre
 - **Slope Overload Noise:** If the analog signal changes more rapidly than the staircase can follow, the staircase falls behind. 7 This occurs when the step size is too small.
     
 - **Quantizing Noise:** If the analog signal changes very slowly, the staircase function overshoots the signal, alternating between steps above and below it. 8 This occurs when the step size is too large.
+
+# 2023 End sem 
+
+![Pasted image 20250917235233.png](/img/user/Attachments/Pasted%20image%2020250917235233.png)
+Of course. The Open Systems Interconnection (OSI) model is a conceptual framework that standardizes the functions of a telecommunication or computing system into seven distinct abstraction layers. Each layer serves the layer above it and is served by the layer below it.
+
+Here is a description of the function, services, and interfaces of each layer in the OSI model.
+
+---
+
+### Layer 7: Application Layer
+
+- **Function**: This is the top layer, and it's the one closest to the end-user. It provides a direct interface for user applications to access network services. Its main role is to handle protocols and data formatting that are specific to the application. **Think of it as the user interface of the network.**
+    
+- **Services**: It offers services like file transfer (FTP), web browsing (HTTP/HTTPS), and email (SMTP, POP3). It's responsible for identifying communication partners and determining resource availability.
+    
+- **Interface**: The Application layer interfaces directly with software applications (like your web browser or email client) through Application Programming Interfaces (APIs). It receives data and requests from these applications and passes them down to the Presentation Layer.
+    
+- **PDU (Protocol Data Unit)**: Data
+    
+
+---
+
+### Layer 6: Presentation Layer
+
+- **Function**: This layer acts as a translator for the network. It takes data from the Application layer and transforms it into a standard format that the rest of the OSI model can understand. It's responsible for **data translation, character code translation, encryption/decryption, and data compression**.
+    
+- **Services**: It provides data formatting and encryption services to the Application layer, ensuring that data sent from one system's application layer can be read and understood by the application layer of another system.
+    
+- **Interface**: It interfaces with the Application layer above it, taking data and commands, and with the Session layer below it, passing on the formatted and encrypted data.
+    
+- **PDU**: Data
+    
+
+---
+
+### Layer 5: Session Layer
+
+- **Function**: The Session layer is responsible for establishing, managing, and terminating sessions (connections) between two computers. It controls the dialogue between devices, determining who can transmit, when, and for how long. It also handles **session checkpointing and recovery**, allowing a session to resume from where it left off in case of an interruption.
+    
+- **Services**: It offers dialogue control (simplex, half-duplex, full-duplex) and synchronization services to the Presentation layer.
+    
+- **Interface**: It uses the services of the Transport layer below to establish a reliable connection and provides a seamless session service to the Presentation layer above.
+    
+- **PDU**: Data
+    
+
+---
+
+### Layer 4: Transport Layer
+
+- **Function**: This layer provides reliable, end-to-end data transfer between hosts. It ensures that data is delivered completely, in the correct order, and without errors. Key functions include **segmentation** (breaking large data into smaller segments), **flow control** (managing the rate of data transmission), and **error control** (using checksums and acknowledgements). The two most common protocols here are TCP (reliable, connection-oriented) and UDP (unreliable, connectionless).
+    
+- **Services**: It offers connection-oriented (TCP) and connectionless (UDP) services to the Session layer. It provides the upper layers with a transport service independent of the underlying network.
+    
+- **Interface**: It accepts data from the Session layer, segments it, and passes these segments to the Network layer. The interface is defined by port numbers, which direct segments to the correct application on the destination host.
+    
+- **PDU**: Segment (for TCP) or Datagram (for UDP)
+    
+
+---
+
+### Layer 3: Network Layer
+
+- **Function**: The Network layer is responsible for **logical addressing** (like IP addresses) and **routing**. It determines the best physical path for the data to take to reach its destination across multiple networks. It manages the routing of packets from source to destination.
+    
+- **Services**: It provides host-to-host packet delivery service for the Transport layer. It moves packets across the internetwork.
+    
+- **Interface**: It takes segments from the Transport layer, encapsulates them into packets, adds source and destination logical addresses, and hands the packets down to the Data Link layer.
+    
+- **PDU**: Packet
+    
+
+---
+
+### Layer 2: Data Link Layer
+
+- **Function**: This layer provides reliable node-to-node data transfer. It takes the packets from the Network layer and packages them into **frames**. It is responsible for **physical addressing** (MAC addresses), error detection (but not necessarily correction), and controlling how devices on the same physical medium gain access to it. It is often divided into two sublayers: Logical Link Control (LLC) and Media Access Control (MAC).
+    
+- **Services**: It provides a reliable and error-checked transmission service over a physical link to the Network layer.
+    
+- **Interface**: It receives packets from the Network layer and provides an interface to the Physical layer to transmit the frames as a bitstream.
+    
+- **PDU**: Frame
+    
+
+---
+
+### Layer 1: Physical Layer
+
+- **Function**: This is the lowest layer of the OSI model. It is responsible for the actual physical connection between devices. It defines the physical and electrical specifications for the devices, such as **voltage levels, pin layouts, cable specifications, and transmission rates**. It transmits raw, unstructured data as a stream of bits (1s and 0s) over a physical medium (e.g., copper wire, fiber optic cable, radio waves).
+    
+- **Services**: It provides the service of transmitting individual bits from one node to the next.
+    
+- **Interface**: It interfaces with the Data Link layer to receive frames and convert them into electrical, radio, or optical signals for transmission.
+    
+- **PDU**: Bit
+
+![Pasted image 20250917235406.png](/img/user/Attachments/Pasted%20image%2020250917235406.png)
+see copy
+![Pasted image 20250917235423.png](/img/user/Attachments/Pasted%20image%2020250917235423.png)
+An
+
+**antenna** is an electrical conductor used for radiating or collecting electromagnetic energy. 1In essence, it converts electrical energy from a transmitter into electromagnetic waves and converts electromagnetic waves back into electrical energy for a receiver. 2
+
+The two primary types of antennas are the idealized isotropic antenna and the highly practical parabolic reflective antenna.
+
+---
+
+### Isotropic (Omnidirectional) Antenna
+
+An isotropic antenna is an idealized concept used as a reference for antenna performance.
+
+- **Characteristics:** It is a theoretical single point in space that radiates power **equally in all directions**. 3Its radiation pattern is a perfect sphere with the antenna at the center. 4
+    
+- **Performance:** As a perfect omnidirectional antenna, it serves as the baseline for measuring antenna gain. By definition, its power gain is 1, or 0 dB. 5
+    
+
+---
+
+### Parabolic Reflective (Directional) Antenna
+
+This is a very common type of antenna, often seen as a "dish," used for terrestrial microwave and satellite applications. 6
+
+- **Characteristics:** It uses a parabolic shape to focus electromagnetic energy. When transmitting, energy from a source placed at the focus is reflected outward in a narrow, parallel beam. 7When receiving, incoming parallel waves are reflected and concentrated at the focus. 8 This makes it highly
+    
+    **directional**.
+    
+- **Performance:** The key performance metric is **antenna gain**, which measures its directionality. 9
+    
+    - Antenna gain is defined as the power output in a particular direction compared to that produced by a perfect isotropic antenna. 10
+        
+    - It concentrates radiated power in one direction by reducing the power radiated in other directions. 11
+        
+    - The larger the diameter of the dish, the more tightly focused the beam and the higher the antenna gain. 12For example, a parabolic antenna with a 2-meter diameter operating at 12 GHz has a gain of approximately 45.46 dB, meaning its power in the desired direction is over 35,000 times that of an isotropic antenna. 13
+        
+
+### Summary of Characteristics
+
+| Characteristic        | Isotropic (Omnidirectional) Antenna                 | Parabolic Reflective (Directional) Antenna         |
+| --------------------- | --------------------------------------------------- | -------------------------------------------------- |
+| **Radiation Pattern** | Radiates equally in all directions (spherical). 14  | Focuses energy into a narrow, parallel beam. 15    |
+| **Directionality**    | None (omnidirectional). 16                          | High (directional). 17                             |
+| **Antenna Gain**      | Serves as the reference with a gain of 1 (0 dB). 18 | High gain, concentrates power in one direction. 19 |
+| **Typical Use**       | Idealized reference model. 20                       | Terrestrial and satellite microwave links. 21      |
+![Pasted image 20250917235447.png](/img/user/Attachments/Pasted%20image%2020250917235447.png)
+
+The two principal techniques for transforming analog data into a digital signal are **Pulse Code Modulation (PCM)** and **Delta Modulation (DM)**.
+
+---
+
+### 1. Pulse Code Modulation (PCM)
+
+PCM is a method that converts an analog signal into a digital bit stream through a three-step process: sampling, quantizing, and encoding. 1
+
+1. **Sampling:** The analog signal is sampled at regular intervals. According to the sampling theorem, this rate must be higher than twice the highest frequency of the analog signal to preserve all its information. 2The result is a series of analog samples called Pulse Amplitude Modulation (PAM) samples. 3
+    
+2. **Quantizing:** Each analog PAM sample is then approximated by being assigned to one of a discrete set of quantization levels. 4
+    
+3. **Encoding:** Each quantization level is assigned a unique binary code, and the bit stream is formed by concatenating these codes. 5
+    
+
+Example:
+
+An analog signal is sampled, and each sample is quantized into one of 16 different levels. 6Each of these 16 levels can then be represented by a unique
+
+**4-bit** binary code (since 2⁴ = 16). 7The resulting digital signal would be a stream of these 4-bit codes. 8
+
+---
+
+### 2. Delta Modulation (DM)
+
+Delta Modulation (DM) approximates an analog signal with a
+
+**staircase function** that moves up or down by a fixed step size (δ) at each sampling interval. 9
+
+The working principle is as follows:
+
+- At each sampling time, the analog input is compared to the current value of the staircase function. 10
+    
+- If the analog signal is greater than the staircase value, a binary
+    
+    **1** is generated, and the staircase moves **up** by one step. 11
+    
+- If the analog signal is less than the staircase value, a binary
+    
+    **0** is generated, and the staircase moves **down** by one step. 12
+    
+
+This technique produces a bit stream that represents the
+
+_change_ in the analog signal's amplitude rather than its absolute value. 13
+
+Example:
+
+As shown in the diagram below, the staircase function tracks the original analog waveform. The digital output is a stream of 1s and 0s, indicating whether the signal's slope is positive or negative at each sample point. 14
+# 2019 End sem 
+
+![Pasted image 20250917235838.png](/img/user/Attachments/Pasted%20image%2020250917235838.png)
+
+The **Application, Presentation, and Session layers** together are known as the OSI model's user support layers. These three layers provide services directly to user applications and are responsible for application interface, data presentation (like encoding, encryption), and session management between devices
+### Types of Addresses
+
+In a network, three types of addresses are used to deliver data from a source application to a destination application: physical, logical, and port addresses.
+
+#### Physical Address (MAC Address)
+
+A
+
+**physical address** is the address of a node as defined at the **Data Link Layer**. It is also known as the
+
+**Media Access Control (MAC) address**.
+
+- **Function:** It is used to deliver a data frame from one device to another device on the **same physical network** (e.g., the same Ethernet LAN).
+    
+- **Scope:** Local to a specific network.
+    
+- **Analogy:** Think of it as a specific room number in a large building. It's only useful for finding your way once you are already inside the building.
+    
+
+#### Logical Address (IP Address)
+
+A
+
+**logical address** is used at the **Network Layer** (or Internet Layer) to uniquely identify a host across an entire internetwork. The prime example is the
+
+**IP address**.
+
+- **Function:** It is used by routers to forward a packet from the source network to the destination network. The address is global and consists of a network part and a host part.
+    
+- **Scope:** Global or internetwork-wide.
+    
+- **Analogy:** This is like the street address of the building. It's used to get your mail from anywhere in the world to the correct building.
+    
+
+#### Port Address (Service Access Point)
+
+A
+
+**port address** is used at the **Transport Layer** to identify a specific application or process within a host. It is also referred to as a
+
+**Service Access Point (SAP)**.
+
+- **Function:** It allows the transport layer to deliver a data segment to the correct application (e.g., a web browser on port 80, an email client on port 25) on the destination host, which may be running multiple network applications at the same time.
+    
+- **Scope:** Specific to a single host.
+    
+- **Analogy:** This is like the person's name or department on the envelope ("Attn: Sales Department"). Once the mail reaches the correct building (logical address), the port address ensures it gets to the right recipient inside.
+
+![Pasted image 20250917235854.png](/img/user/Attachments/Pasted%20image%2020250917235854.png)
+**Channel capacity** is the maximum rate at which data can be transmitted over a given communication path, or channel, under specific conditions. 1 Both the Nyquist and Shannon formulas define this maximum rate but under different channel assumptions.
+
+---
+
+### Nyquist Channel Capacity Formula
+
+The Nyquist formula applies to a
+
+**noise-free** channel and states that the maximum data rate is limited by the bandwidth of the channel and the number of signal levels used. 2The limitation is due to
+
+**intersymbol interference**, where the signal from one bit position can spill over and corrupt the signal of a neighboring bit. 3
+
+For multilevel signaling, the Nyquist formula is:
+
+_C = 2B log₂(M)_
+
+Where:
+
+- **C** = Channel capacity in bits per second (bps)
+    
+- **B** = Bandwidth of the channel in Hertz (Hz)
+    
+- **M** = Number of discrete signal or voltage levels
+    
+
+This formula shows that for a given bandwidth, the data rate can be increased by increasing the number of different signal elements. 4However, this places a greater burden on the receiver to distinguish between the levels, and in a real-world channel, noise limits the practical value of M. 5
+
+---
+
+### Shannon’s Channel Capacity Formula
+
+The Shannon formula applies to a channel that is subject to
+
+**random (thermal) noise**. 6It defines the theoretical maximum error-free data rate by relating the data rate, bandwidth, and noise, which is quantified by the
+
+**signal-to-noise ratio (SNR)**. 7
+
+The Shannon formula is:
+
+_C = B log₂(1 + SNR)_
+
+Where:
+
+- **C** = Channel capacity in bits per second (bps)
+    
+- **B** = Bandwidth of the channel in Hertz (Hz)
+    
+- **SNR** = Signal-to-noise power ratio (a linear ratio, not in decibels)
+    
+
+Shannon's formula represents the
+
+**theoretical maximum** data rate that can be achieved on a noisy channel. 8In practice, achievable rates are lower because the formula only accounts for white noise and not other impairments like impulse noise or delay distortion. 9It serves as a crucial benchmark by which the performance of practical communication systems is measured. 10
+![Pasted image 20250917235907.png](/img/user/Attachments/Pasted%20image%2020250917235907.png)
+see above
+
+![Pasted image 20250917235920.png](/img/user/Attachments/Pasted%20image%2020250917235920.png)
+see above
+
+# 2022 End sem
+
+![Pasted image 20250918000242.png](/img/user/Attachments/Pasted%20image%2020250918000242.png)
+Protocols are needed because exchanging data between devices is a complex process that requires a high degree of cooperation1. Simply having a physical data path between two computers is not enough to ensure a successful exchange2.
+
+A
+
+**protocol** is a set of rules or conventions that govern how corresponding, or "peer," entities in two different systems communicate3. These rules manage the complexities involved in communication.
+
+For example, for a simple file transfer between two computers, the following tasks must be performed, all of which are managed by protocols4:
+
+- The source computer must activate a direct data path or inform the network of the destination's identity5.
+    
+- The source computer must verify that the destination computer is ready to receive data6.
+    
+- The file transfer application on the source computer must confirm that the file management program on the destination is prepared to accept and store the file7.
+    
+- If the file formats on the two systems are different, one of the systems must perform a format translation8.
+    
+
+Without established protocols, devices would be unable to coordinate these essential tasks, and communication would fail.
+![Pasted image 20250918000256.png](/img/user/Attachments/Pasted%20image%2020250918000256.png)
+see in 2019 paper
+![Pasted image 20250918000328.png](/img/user/Attachments/Pasted%20image%2020250918000328.png)
+see above
+
+![Pasted image 20250918000417.png](/img/user/Attachments/Pasted%20image%2020250918000417.png)
+The primary significance of twisting the wires in a twisted-pair cable is to reduce electrical interference, specifically **crosstalk**.
+
+Crosstalk is the unwanted coupling of signals between adjacent pairs of wires when they are bundled together into a larger cable1. By twisting the wires, the electromagnetic fields generated by each wire tend to cancel each other out, which decreases the interference that one pair of wires can cause on another2.
+
+![Pasted image 20250918000432.png](/img/user/Attachments/Pasted%20image%2020250918000432.png)
+
+see above
+
+![Pasted image 20250918000446.png](/img/user/Attachments/Pasted%20image%2020250918000446.png)
+see above 
+
+
+
+
+
+
+
